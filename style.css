@@ -1,0 +1,150 @@
+body{
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #226e48;
+}
+
+#home-navigation{
+    text-align: center;
+    margin-top: 15%;
+    width: 100%;
+    color: orange;
+    font-size: large;
+}
+
+#rulesLink{
+    text-decoration: none;
+    font-size: large;
+    font-weight: 600;
+    color: white;
+    margin: 20px;
+}
+
+#rulesLink:hover{
+    color: orange;
+}
+
+.playerContainer{
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+}
+
+.gameContainer{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    color: white;
+}
+
+#hideGameContainer{
+    width: 100%;
+    display: none;
+}
+
+ul{
+    list-style: none;
+    margin: auto;
+    width: 50%;
+    border: 3px solid orange;
+    padding: 0;
+    font-weight: 600;
+}
+
+.cards{
+    width: 100px;
+    height: 160px;
+    margin: 5px;
+    border: 1px solid black;
+    background-image: url('./img/facedowncard.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  
+    
+}
+
+.cardSize{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.CardContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+}
+
+#messagePopUp{
+    width: 50%;
+    height: 100px;
+    background-image: url('./img/winImage.jpg');
+    font-size: large;
+    position: relative;
+    display: none;
+    text-align: center;
+    background-color: orange;
+
+}
+.popUpButton{
+    width: 200px;
+    margin: 30px;
+    font-size: larger;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+}
+
+.playOptions{
+    color: white;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.playerOptionButton{
+    width: 50px;
+}
+
+#winLoseMessage{
+    margin: 0;
+    padding: 0;
+}
+
+#controls{
+    width: 50%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+@media all and (min-width:650px) and (max-width: 1055px) {
+    
+    .cards{
+        width: 100px;
+        height: 80px;
+    }
+    
+
+    .popUpButton{
+        width: 100px;
+        font-size: 15px;
+    }
+  }
+
+@media all and (min-width:100px) and (max-width: 649px) {
+    
+    .cards{
+        width: 30px;
+        height: 60px;
+    }
+
+    .popUpButton{
+        width: 70px;
+        font-size: 10px;
+        margin: 0;
+    }
+  }

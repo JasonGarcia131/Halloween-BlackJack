@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id = 'hideGameContainer'>
+        <div class="gameContainer" >
+                <div class="playerContainer">
+                    <div class="CardContainer" id = 'player1CardContainer'>
+                        <!-- <div class="cards" id="player1InitialCard1"></div>
+                        <div class="cards" id="player1InitialCard2"></div> -->
+                    </div>
+                    <div class = 'controls' id = 'player1Btns'>
+                        <button id = 'hitButton' class = 'playerOptionButton' aria-label = 'Hit button' onclick = 'hit()'>HIT</button>
+                        <button id = 'stayButton' class = 'playerOptionButton' aria-label = 'Stay button' onclick = 'player2Turn()'>STAY</button>
+                        <h3 class = 'handDisplay'>Player 1 Hand: </h3>
+                        <h4 id = 'yourWallet'>Your Wallet: $1000 </h4>
+                    </div>
+                </div>
+                <div class="playerContainer">
+                    <div class="CardContainer" id = 'player2CardContainer'>
+                        <!-- <div class="cards" id="player2InitialCard1"></div>
+                        <div class="cards" id="player2InitialCard2"></div> -->
+                    
+                    </div>
+                    <div class = 'controls' id = 'player2Btns'>
+                        <button id = 'hitButton' class = 'playerOptionButton' aria-label = 'Hit button' onclick = 'hit()'>HIT</button>
+                        <button id = 'stayButton' class = 'playerOptionButton'  aria-label = 'Stay button' onclick = 'compareHands()'>STAY</button>
+                        <h3 class = 'handDisplay'>Player 2 Hand: </h3>
+                        <h4 id = 'yourWallet'>Your Wallet: $1000 </h4>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div id="messagePopUp">
+        <p id = 'winLoseMessage'>message</p>
+        <button class = 'popUpButton' id = 'tryAgain' class = 'playerOptionButton' aria-label=" Play again button" onclick = 'playAgain()'>Play Again</button>
+        <button class = 'popUpButton' id = 'exit' aria-label=" Exit game button" class = 'playerOptionButton' onclick = 'returnHome()'>Exit</button>
+    </div>
+    <nav id="home-navigation">
+        <ul>
+            <li>
+                <h2>BLACK JACK</h2>
+            </li>
+            <li>
+               <button id = 'startButton' onclick = 'hideHomepage()'/>Start</button>
+            </li>
+            <li>
+                <a id = 'rulesLink' href="rulesPage.html"><button>Rules</button></a>
+            </li>
+        </ul>
+    </nav>    
+    <script src="main.js" defer></script>
+</body>
+</html>
