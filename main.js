@@ -166,6 +166,7 @@ let deckObject = [
         value: 10
     }
 ]
+
 const player1CardContainer = document.getElementById('player1CardContainer');
 const player2CardContainer = document.getElementById('player2CardContainer');
 let hideGameContainer = document.getElementById('hideGameContainer');

@@ -61,9 +61,7 @@ ul{
     border: 1px solid black;
     background-image: url('./img/facedowncard.png');
     background-size: contain;
-    background-repeat: no-repeat;
-  
-    
+    background-repeat: no-repeat;  
 }
 
 .cardSize{

@@ -3,9 +3,9 @@ body {
   height: 100vh;
   box-sizing: border-box;
   margin: 0;
-  background-color: #eb6123;
   background-image: url("../img/halloween-background.jpg");
   background-size: cover;
+  color: white;
 }
 
 #hideGameContainer {
@@ -38,27 +38,32 @@ body {
   justify-content: center;
   width: 100%;
   height: 200px;
-  border: 1px solid black;
 }
 .gameContainer .playerContainer .CardContainer .cards {
   width: 140px;
   height: 200px;
   margin: 5px;
-  border: 1px solid black;
 }
 .gameContainer .controls {
   width: 100%;
   text-align: center;
-  border: 1px solid black;
+  background-color: rgba(0,0,0,.7);
+  border: 1px double black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 #home-navigation {
   width: 50%;
+  text-align: center;
   margin: 20% auto;
 }
 #home-navigation ul {
   list-style: none;
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0;
 }
 
 button {
