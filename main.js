@@ -235,7 +235,7 @@ class Hand {
             return this;
         }
         else{
-            popUpMessage('Busted!');
+            popUpMessage("Busted");
             return this;
         }
     }

@@ -15,9 +15,9 @@
                         <div class="cards" id="player1InitialCard2"></div> -->
                     </div>
                     <div class = 'controls' id = 'player1Btns'>
+                        <h3 class = 'handDisplay'>Player 1 Hand: </h3>
                         <button id = 'hitButton' class = 'playerOptionButton' aria-label = 'Hit button' onclick = 'hit()'>HIT</button>
                         <button id = 'stayButton' class = 'playerOptionButton' aria-label = 'Stay button' onclick = 'player2Turn()'>STAY</button>
-                        <h3 class = 'handDisplay'>Player 1 Hand: </h3>
                         <!-- <h4 id = 'yourWallet'>Your Wallet: $1000 </h4> -->
                     </div>
                 </div>
@@ -28,18 +28,18 @@
                     
                     </div>
                     <div class = 'controls' id = 'player2Btns'>
+                        <h3 class = 'handDisplay'>Player 2 Hand: </h3>
                         <button id = 'hitButton' class = 'playerOptionButton' aria-label = 'Hit button' onclick = 'hit()'>HIT</button>
                         <button id = 'stayButton' class = 'playerOptionButton'  aria-label = 'Stay button' onclick = 'compareHands()'>STAY</button>
-                        <h3 class = 'handDisplay'>Player 2 Hand: </h3>
                         <!-- <h4 id = 'yourWallet'>Your Wallet: $1000 </h4> -->
                     </div>
                 </div>
+                <div id="messagePopUp">
+                    <p id = 'winLoseMessage'>message</p>
+                    <button class = 'popUpButton' id = 'tryAgain' class = 'playerOptionButton' aria-label=" Play again button" onclick = 'playAgain()'>Play Again</button>
+                    <button class = 'popUpButton' id = 'exit' aria-label=" Exit game button" class = 'playerOptionButton' onclick = 'returnHome()'>Exit</button>
+                </div>
         </div>
-    </div>
-    <div id="messagePopUp">
-        <p id = 'winLoseMessage'>message</p>
-        <button class = 'popUpButton' id = 'tryAgain' class = 'playerOptionButton' aria-label=" Play again button" onclick = 'playAgain()'>Play Again</button>
-        <button class = 'popUpButton' id = 'exit' aria-label=" Exit game button" class = 'playerOptionButton' onclick = 'returnHome()'>Exit</button>
     </div>
     <nav id="home-navigation">
         <h2>BLACK JACK</h2>

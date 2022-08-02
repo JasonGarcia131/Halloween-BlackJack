@@ -6,6 +6,7 @@ body {
   background-image: url("../img/halloween-background.jpg");
   background-size: cover;
   color: white;
+  
 }
 
 #hideGameContainer {
@@ -15,21 +16,25 @@ body {
 
 #messagePopUp {
   display: none;
+  width: 100%;
   text-align: center;
-  width: 50%;
-  margin: 0 auto;
+  margin: 0 auto; 
+  position: absolute;
+  background-color: rgb(121, 9, 9);
+  box-shadow: 3px 10px 20px rgb(121, 9, 9);
 }
 
 .gameContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 400px;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
 }
 .gameContainer .playerContainer {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 100%;
 }
 .gameContainer .playerContainer .CardContainer {
@@ -43,12 +48,11 @@ body {
   width: 140px;
   height: 200px;
   margin: 5px;
+  box-shadow: 3px 10px 20px rgb(121, 9, 9);
 }
 .gameContainer .controls {
   width: 100%;
   text-align: center;
-  background-color: rgba(0,0,0,.7);
-  border: 1px double black;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
