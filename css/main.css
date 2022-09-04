@@ -91,6 +91,7 @@ button {
   .cards {
     width: 30px;
     height: 60px;
+    margin: 0;
   }
   .popUpButton {
     width: 70px;

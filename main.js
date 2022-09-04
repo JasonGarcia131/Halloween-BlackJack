@@ -186,13 +186,14 @@ class Hand {
         this.playerDiv = playerDiv; 
     }
 
+    //Generates a random number and assigns it to a variable. Pushes it into in array 
     deal(){
         const dealtCard = deckObject[Math.floor(Math.random()*deckObject.length)];
         this.handArray.push(dealtCard);
         this.flipCard(dealtCard.img)
         return this;
     }
-    
+    //Takes an argument and creates a div with a class "cards". sets the background image to the image of the card in the array.
     flipCard(img){
         let div = document.createElement('div');
         div.classList.add('cards');
@@ -200,31 +201,26 @@ class Hand {
         this.playerDiv.append(div);
 
     }
-   
+
     getHand(){
         console.log('Player Hand', this.handArray);
         return this;
     }
-
+    //Loops through the players hand and sums the value of the cards. *Update: Spread operator is more efficient*
     getSum(){
         let totalHandSum = 0;
         for(let i = 0; i < this.handArray.length; i++){
             totalHandSum += this.handArray[i].value;
         }
-        // for(let i = 0; i < handDisplay.length; i++){
-        //     handDisplay[i].textContent = `Your Hand: ${totalHandSum}`
-        // }
         if(!player2){
             handDisplay[0].textContent = `Player 1 Hand: ${totalHandSum}`
         }else{
             handDisplay[1].textContent = `Player 2 Hand: ${totalHandSum}`
         }
-
-        console.log('hand display', handDisplay)
         this.check(totalHandSum);
         return totalHandSum;
     }
-
+    //Checks the value of the sum and compares it to 21.
     check(totalHandSum){
         if(totalHandSum < 21){
             console.log('keep going!');
@@ -239,7 +235,7 @@ class Hand {
             return this;
         }
     }
-
+    //resets the hand array and removes the card divs
     getNewRound(){
         player2 = false;
         this.handArray = [];
@@ -250,24 +246,36 @@ class Hand {
             player2CardContainer.removeChild(player2CardContainer.lastChild);
         }
         onStart();
-        console.log('-------New Round-------');
     }
 } 
+
+//Working on making a single player version with a CPU opponent.
+class Dealer extends Hand(){
+    constructor(playerDiv){
+        super(playerDiv)
+        this.dealerDiv = playerDiv
+    }
+
+    dealerDeal(){
+        return this.deal()
+    }
+    
+}
+
+//Initializes players hand class on page load
 var player1Hand = new Hand(player1CardContainer);
 var player2Hand = new Hand(player2CardContainer);
 
-
+//Initializes player hands per round
 function onStart(){
     player1Hand = new Hand(player1CardContainer);
     player2Hand = new Hand(player2CardContainer);
-    console.log('--------Start Game--------')
     player1Hand.deal().deal().getHand().getSum();
     player2Hand.deal().deal();
 
 }
 
 function hit(){
-    console.log('------------Hit-------------')
     if(!player2){
         player1Hand.deal().getHand().getSum();
     }
@@ -285,6 +293,7 @@ function hideHomepage(){    //1. This function runs when user clicks start on th
     onStart(); 
 }
 
+//Works as a modol.
 function popUpMessage(message){
     popUp.style.display = 'block';
     player1Btns.style.visibility = 'hidden';
@@ -293,23 +302,17 @@ function popUpMessage(message){
 }
 
 function compareHands(){
-    console.log('Hand1', player1Hand.getSum());
-    console.log('Hand2', player2Hand.getSum());
     player1Hand.getSum() > player2Hand.getSum() ? popUpMessage('Player 1 Wins!'): popUpMessage('Player 2 Wins!');
-
 }
 
 function player2Turn(){
     player2 = !player2;
     player2Hand.getSum();
-    console.log('--------Player 2 turn-------');
     player1Btns.style.visibility = 'hidden';
     player2Btns.style.visibility = 'visible';
 }
 
 function playAgain(){
-    // player2Turn = false;
-    // this.handArray = [];
     player1Btns.style.visibility = 'visible';
     player2Btns.style.visibility = 'hidden';
     popUp.style.display = 'none';
@@ -321,6 +324,3 @@ function playAgain(){
 function returnHome(){
     window.location.href = "index.html";
 }
-//Working on the hit stay buttons functionality. add compareHands();
-//need to make popUp buttons reset the game.
-//style the pop up message.
