@@ -9,6 +9,10 @@ body {
   
 }
 
+a{
+color: white;
+}
+
 #hideGameContainer {
   display: none;
   width: 100%;
@@ -57,6 +61,21 @@ body {
   border-top-right-radius: 10px;
 }
 
+.rulesBackground{
+  width: 50%;
+  margin: 0 auto;
+  background-color:rgba(0, 0, 0, 0.8);
+  box-shadow: 2px 10px 20px rgb(121, 9, 9)
+}
+
+#rulesContainer{
+  text-align: center;
+  height: 100vh;
+  background-image: url("./img/halloween-background.jpg");
+  background-size: cover;
+}
+
+
 #home-navigation {
   width: 50%;
   text-align: center;
@@ -71,10 +90,10 @@ body {
 }
 
 button {
-  width: 50px;
-  height: 60px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  width: 80px;
+  height: 90px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
 @media all and (min-width: 650px) and (max-width: 1055px) {

@@ -2,8 +2,7 @@ body{
     width: 100%;
     margin: 0;
     box-sizing: border-box;
-    background-color: #226e48;
-}
+    }
 
 #home-navigation{
     text-align: center;
@@ -23,6 +22,13 @@ body{
 
 #rulesLink:hover{
     color: orange;
+}
+
+.rulesContainer{
+    text-align: center;
+    height: 100vh;
+    background-image: url("./img/halloween-background.jpg");
+    background-size: cover;
 }
 
 .playerContainer{

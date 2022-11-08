@@ -203,7 +203,6 @@ class Hand {
     }
 
     getHand(){
-        console.log('Player Hand', this.handArray);
         return this;
     }
     //Loops through the players hand and sums the value of the cards. *Update: Spread operator is more efficient*
@@ -223,7 +222,6 @@ class Hand {
     //Checks the value of the sum and compares it to 21.
     check(totalHandSum){
         if(totalHandSum < 21){
-            console.log('keep going!');
             return this;
         }
         else if(totalHandSum == 21){
@@ -316,7 +314,6 @@ function playAgain(){
     player1Btns.style.visibility = 'visible';
     player2Btns.style.visibility = 'hidden';
     popUp.style.display = 'none';
-    console.log('i got Clicked')
     player1Hand.getNewRound();
     player2Hand.getNewRound();
 }
